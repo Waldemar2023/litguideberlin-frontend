@@ -7,3 +7,25 @@
 .App {
   text-align: center;
 }
+
+/* body {
+  margin: 0;
+  padding: 0;
+  background: url('/background.jpg') no-repeat center center fixed;
+  background-size: cover;
+} */
+
+body {
+  margin: 0;
+  padding: 0;
+  background: url('../public/background.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  /* Add additional styling as needed */
+}
