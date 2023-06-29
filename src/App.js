@@ -24,20 +24,27 @@ function App() {
   return (
     <div className="App">
       <header>
-        <h1>Header</h1>
+        <h1>Header: LitGuideBerlin</h1>
+        <nav className="Register">
+          <button>Authors</button>
+          <button>Museums</button>
+          <button>About</button>
+        </nav>
       </header>
       <main>
         <h1>Main</h1>
         {entries.length > 0 ? (
           entries.map((entry) => {
             return (
-              <>
-                <article className="entry-article">
-                  <h1>{entry.title}</h1>
-                  <h2>{entry.description}</h2>
-                  <img src={entry.image} alt={entry.title} />
-                </article>
-              </>
+              <article className="entry-article" key={entry._id}>
+                <h1>{entry.title}</h1>
+                <h2>{entry.description}</h2>
+                <img
+                  className="entry-image"
+                  src={entry.image}
+                  alt={entry.title}
+                />
+              </article>
             );
           })
         ) : (
