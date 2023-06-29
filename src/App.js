@@ -1,6 +1,7 @@
 import './App.css';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+import MyMap from './components/MyMap';
 
 function App() {
   const [entries, setEntries] = useState([]);
@@ -36,6 +37,7 @@ function App() {
         {entries.length > 0 ? (
           entries.map((entry) => {
             return (
+            
               <article className="entry-article" key={entry._id}>
                 <h1>{entry.title}</h1>
                 <h2>{entry.description}</h2>
@@ -44,6 +46,7 @@ function App() {
                   src={entry.image}
                   alt={entry.title}
                 />
+                <MyMap lat={52.531377} lng={13.381777} />
               </article>
             );
           })
