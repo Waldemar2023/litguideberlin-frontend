@@ -44,3 +44,9 @@ body {
   box-shadow: 5px 5px 5px yellow;
   max-width: 200px;
 }
+
+.leaflet-container {
+  width: 50vw;
+  height: 50vh;
+  margin: 0 auto;
+}

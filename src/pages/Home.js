@@ -1,29 +1,9 @@
 import '../styles/App.css';
-import { useEffect, useState } from 'react';
-import axios from 'axios';
 import MyMap from '../components/MyMap';
 import Header from '../components/Header';
 import { Link } from 'react-router-dom';
 
-export default function Home() {
-  const [entries, setEntries] = useState([]);
-
-  useEffect(() => {
-    const getAllEntries = async () => {
-      const URI = `${process.env.REACT_APP_LITGUIDEBERLIN_API}/entries`;
-
-      try {
-        const response = await axios.get(URI);
-        // console.log(response.data);
-        setEntries(response.data);
-      } catch (error) {
-        console.error(error);
-      }
-    };
-
-    getAllEntries();
-  }, []);
-
+export default function Home({ entries }) {
   return (
     <div className="home">
       <Header />
