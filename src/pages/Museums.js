@@ -2,7 +2,7 @@ import MyMap from '../components/MyMap';
 import Header from '../components/Header';
 import { Link } from 'react-router-dom';
 
-export default function Museums({entries}) {
+export default function Museums({ entries }) {
   return (
     <div className="home">
       <Header />
@@ -23,7 +23,7 @@ export default function Museums({entries}) {
                       alt={entry.title}
                     />
                   </Link>
-                  <MyMap lat={52.531377} lng={13.381777} />
+                  <MyMap lat={entry.latitude || 52.531377} lng={entry.longitude || 13.381777} />
                 </article>
               );
             })

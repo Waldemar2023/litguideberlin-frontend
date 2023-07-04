@@ -22,7 +22,7 @@ export default function Home({ entries }) {
                     alt={entry.title}
                   />
                 </Link>
-                <MyMap lat={52.531377} lng={13.381777} />
+                <MyMap lat={entry.latitude || 52.531377} lng={entry.longitude || 13.381777} />
               </article>
             );
           })

@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 export default function Header() {
   return (
     <header className="header">
-      <h1>Header: LitGuideBerlin</h1>
+      <h1>LitGuideBerlin</h1>
       <nav className="register">
         <NavLink to="/">
           <button>Home</button>
