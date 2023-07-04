@@ -7,7 +7,29 @@
 #root {
   text-align: center;
 }
+/* 
+.nav-ul {
+  padding: 5px;
+  margin: 0px;
+  background-color: blueviolet;
+}
 
+.nav-ul li {
+  display: inline-block;
+  padding: 10px;
+}
+
+.nav-ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 5px;
+}
+
+.App-header {
+  background-color: aqua;
+  min-height: 100vh
+  
+} */
 /* body {
   margin: 0;
   padding: 0;
@@ -33,11 +55,15 @@ body {
   height: 100vh;
   Add additional styling as needed
 } */
+.header {
+  background-color: blueviolet;
+}
 
 .register {
   display: flex;
   justify-content: center;
   gap: 10px;
+  padding: 1rem;
 }
 
 .entry-image {
@@ -49,4 +75,11 @@ body {
   width: 50vw;
   height: 50vh;
   margin: 0 auto;
+}
+
+.footer {
+background-color: blueviolet;
+padding: 1rem;
+margin-top: 1rem;
+
 }

@@ -2,37 +2,44 @@ import '../styles/App.css';
 import MyMap from '../components/MyMap';
 import Header from '../components/Header';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
+import { useEffect, useState } from 'react';
+import MyMapAll from '../components/MyMapAll';
+import Footer from '../components/Footer';
 
 export default function Home({ entries }) {
+  const [positions, setPositions] = useState([]);
+
+  useEffect(() => {
+    const getAllPositions = async () => {
+      const URI = `${process.env.REACT_APP_LITGUIDEBERLIN_API}/entries`;
+
+      try {
+        const response = await axios.get(URI);
+        // console.log(response.data);
+        const entries = response.data;
+        const positions = entries.map((entry) => {
+          return { position: [entry.latitude, entry.longitude], key: entry._id};
+        });
+        // console.log(positions);
+
+        setPositions(positions);
+      } catch (error) {
+        console.error(error);
+      }
+    };
+
+    getAllPositions();
+  }, []);
+
   return (
     <div className="home">
       <Header />
       <main>
         <h1>Main</h1>
-        {entries.length > 0 ? (
-          entries.map((entry) => {
-            return (
-              <article className="entry-article" key={entry._id}>
-                <h1>{entry.title}</h1>
-                <h2>{entry.description}</h2>
-                <Link to="/articleDetail">
-                  <img
-                    className="entry-image"
-                    src={entry.image}
-                    alt={entry.title}
-                  />
-                </Link>
-                <MyMap lat={entry.latitude || 52.531377} lng={entry.longitude || 13.381777} />
-              </article>
-            );
-          })
-        ) : (
-          <h1>Loading...</h1>
-        )}
+        <MyMapAll positions={positions} />
       </main>
-      <footer>
-        <h1>Footer</h1>
-      </footer>
+      <Footer />
     </div>
   );
 }

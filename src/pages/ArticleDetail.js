@@ -1,3 +1,4 @@
+import Footer from '../components/Footer';
 import Header from '../components/Header';
 
 export default function ArticleDetail() {
@@ -7,6 +8,7 @@ export default function ArticleDetail() {
       <main>
         <h1>ArticleDetail</h1>
       </main>
+      <Footer />
     </>
   );
 }

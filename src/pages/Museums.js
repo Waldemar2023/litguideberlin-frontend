@@ -1,6 +1,7 @@
 import MyMap from '../components/MyMap';
 import Header from '../components/Header';
 import { Link } from 'react-router-dom';
+import Footer from '../components/Footer';
 
 export default function Museums({ entries }) {
   return (
@@ -31,9 +32,7 @@ export default function Museums({ entries }) {
           <h1>Loading...</h1>
         )}
       </main>
-      <footer>
-        <h1>Footer</h1>
-      </footer>
+      <Footer />
     </div>
   );
 }

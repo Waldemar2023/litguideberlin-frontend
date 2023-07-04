@@ -6,6 +6,7 @@ import Museums from './pages/Museums';
 import About from './pages/About';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+import Footer from './components/Footer'; 
 
 function App() {
   const [entries, setEntries] = useState([]);
