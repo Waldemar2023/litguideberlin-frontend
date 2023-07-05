@@ -8,7 +8,7 @@ export default function Authors({entries}) {
     <div className="home">
       <Header />
       <main>
-        <h1>Main</h1>
+        <h1>. . .</h1>
         {entries.length > 0 ? (
           entries
             .filter((entry) => entry.entryType === 'Author')

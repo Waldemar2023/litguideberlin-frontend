@@ -36,7 +36,7 @@ export default function Home({ entries }) {
     <div className="home">
       <Header />
       <main>
-        <h1>Main</h1>
+        <h1>. . .</h1>
         <MyMapAll positions={positions} />
       </main>
       <Footer />

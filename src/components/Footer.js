@@ -1,12 +1,14 @@
-import React from "react";
+import React from 'react';
 
-const Footer=()=>{
-  return(
-    <div className="footer"> 
-      <h3>Waldemar Fredrich</h3>
+const Footer = () => {
+  return (
+    <footer>
+      <div className="footer">
+        <h3>Contact: litguideberlin@web.de</h3>
       </div>
-  )
-}
+    </footer>
+  );
+};
 
 export default Footer;
 //
